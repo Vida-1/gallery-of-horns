@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: lightblue;
+}
+
+article {
+  background-color: white;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+article p {
+  font-size: 15px;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+/*changes the cursor to a clicky finger to indicate clickable element*/
+article p:nth-of-type(2n) {
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+/*changes the color to purple on hover so user knows the text is clicable*/
+article p:nth-of-type(2n):hover {
+  color: purple;
+}
