@@ -1,10 +1,17 @@
-article {
-  border: 1px solid gray;
-  padding: 1vw;
-  margin-bottom: 1vw;
-  width: 16%;
+body{
+  display:flex;
+    margin: .5vw .5vw 1vw .5vw;
 }
 
-article img {
-  width: 100%;
+article {
+  padding: 1vw;
+}
+
+.beastCards {
+  margin: .5vw .5vw .5vw .5vw
+}
+
+#likeLine p {
+  margin-right: .5vw;
+  display: inline-block;
 }

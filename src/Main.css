@@ -2,18 +2,23 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: lightblue;
+  background-color: darkmagenta;
 }
 
 article {
   background-color: white;
   margin: 1rem 0.5rem 1rem 0.5rem;
 }
-article p {
+
+#cardText {
   font-size: 15px;
   margin: auto;
   display: inline-block;
   margin-bottom: .5rem;
+}
+
+.beastRow{
+  margin: 1vw;
 }
 
 /*changes the cursor to a clicky finger to indicate clickable element*/
