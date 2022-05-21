@@ -1,7 +1,4 @@
 body {
   background-color: blue;
-}
-
-img {
-  width: 200px;
+  display: flex;
 }

@@ -1,4 +1,12 @@
-h1{
+header{
+    margin: .5vw 0 1vw 0;
+}
+
+h1 {
+  display: flex;
   font-size: 5vw;
-  
+  font-style: italic;
+  justify-content: center;
+  align-self: center;
+
 }

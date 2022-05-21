@@ -1,7 +1,11 @@
 import React from 'react';
 // import Main from './Main.js';
 import './HornedBeast.css';
-//import Button from 'react-boothstrap/Button';
+// import Button from 'react-boothstrap/Button';
+// import Row from 'react-bootstrap/Row';
+
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -10,27 +14,38 @@ class HornedBeast extends React.Component {
       hearts: 0
     }
   }
-  
+
   likeBeast = () => {
     this.setState({
       hearts: this.state.hearts + 1
     })
-}
+  }
 
+  // I didn't understand how to start working with Cards until Dana Huffman shared in class code review so TY to her!!
   render() {
     return (
-      <>
-
+      <>       
+          <Col className="mb-4">
+            <Card className ="beastCards h-100">
         <article>
-          <h2>{this.props.title}</h2>
-          <h3>{this.props.name}</h3>
-          <p>❤️ {this.state.hearts} Likes </p>
-          <p onClick={this.likeBeast}> Like Me!</p>
-          <img src={this.props.imageURL} alt="beast" title={this.props.title} />
-          <p>{this.props.description}</p>
+         
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Subtitle>{this.props.name}</Card.Subtitle>
 
-        </article>
+          <div id="likeLine">
+            <Card.Text>❤️ {this.state.hearts} Likes</Card.Text>
+            <Card.Text onClick={this.likeBeast}>Like Me!</Card.Text>
+          </div>
+
+          <Card.Img src={this.props.imageURL} alt="beast" title={this.props.title} />
+          <Card.Text>{this.props.description}</Card.Text>
+          
+            </article>
+            </Card>
+          </Col >
+                
       </>
+
     )
   };
 };
