@@ -1,4 +1,4 @@
 body {
-  background-color: blue;
+  background-color: blue; /*if this color is being display go to terminal and restart npm */
   display: flex;
 }

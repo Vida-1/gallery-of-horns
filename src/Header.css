@@ -1,12 +1,14 @@
-header{
-    margin: .5vw 0 1vw 0;
+header {
+  margin: .5vw 0 1vw 0;
+  background-color: purple;
 }
 
 h1 {
   display: flex;
+  color: whitesmoke;
   font-size: 5vw;
   font-style: italic;
   justify-content: center;
   align-self: center;
-
+  padding: .75vw;
 }
