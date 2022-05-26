@@ -41,14 +41,14 @@ class HornedBeast extends React.Component {
                 <Card.Text onClick={this.likeBeast}>Like Me!</Card.Text>
               </div>
 
+              <Card.Text>{this.props.description}</Card.Text>
+
               <Card.Img
                 src={this.props.imageURL}
                 alt="beast"
 
                 onClick={this.beastModalActivate}
               />
-
-              <Card.Text>{this.props.description}</Card.Text>
 
             </article>
 
