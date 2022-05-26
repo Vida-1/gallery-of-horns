@@ -5,6 +5,7 @@ import Footer from './Footer.js';
 import Modal from 'react-bootstrap/Modal';
 import hornedbeastdata from './hornedbeastdata.json';
 import SelectedBeast from './SelectedBeast.js'
+import FilterForm from './FilterForm';
 
 import './App.css';
 
@@ -13,7 +14,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       isModalDisplaying: false,
-      selectedBeast: {}, 
+      selectedBeast: {},
+      data: hornedbeastdata
     }
   }
 
@@ -34,28 +36,33 @@ class App extends React.Component {
 
   closeModalHandler = () => {
     this.setState({
-    isModalDisplaying: false,
+      isModalDisplaying: false,
     });
   }
 
+  updateFilteredBeasts = (filteredBeastArray) => {
+    this.setState({ data: filteredBeastArray });
+  }
+  // Attribution: Special thanks to TA Ben Mills for helping me find the bugs and get this FilterForm feature to work properly!!!
   render() {
-  return (
-    <>
-      <Header />
-      <Main
-        openModalHandler={this.openModalHandler}
-        data={hornedbeastdata}
-      />
-
-      <Footer />
-      <SelectedBeast
-        isModalDisplaying={this.state.isModalDisplaying}
-        selectedBeast={this.state.selectedBeast}
-        closeModalHandler={this.closeModalHandler}
-      />
-    </>
-  );
-}
+    return (
+      <>
+        <Header />
+        <FilterForm data={hornedbeastdata}
+          upFiltBeasts={this.updateFilteredBeasts} />
+        <Main
+          openModalHandler={this.openModalHandler}
+          data={this.state.data}
+        />
+        <Footer />
+        <SelectedBeast
+          isModalDisplaying={this.state.isModalDisplaying}
+          selectedBeast={this.state.selectedBeast}
+          closeModalHandler={this.closeModalHandler}
+        />
+      </>
+    );
+  }
 }
 
 export default App;
